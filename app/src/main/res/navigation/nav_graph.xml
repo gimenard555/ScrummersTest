@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_home"
+    app:startDestination="@id/main_destination">
+
+    <fragment
+        android:id="@+id/main_destination"
+        android:name="com.jimenard.scrummerstest.ui.fragment.CarListFragment"
+        android:label="Main"
+        tools:layout="@layout/fragment_car_list">
+        <action
+            android:id="@+id/action_main_to_details"
+            app:destination="@id/details_destination"
+            app:enterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_main_to_new_car"
+            app:destination="@id/new_car_destination"
+            app:enterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/details_destination"
+        android:name="com.jimenard.scrummerstest.ui.fragment.CarDetailFragment"
+        android:label="Car Details"
+        tools:layout="@layout/fragment_car_detail">
+        <action
+            android:id="@+id/action_detail_to_edit_car"
+            app:destination="@id/new_car_destination"
+            app:enterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/new_car_destination"
+        android:name="com.jimenard.scrummerstest.ui.fragment.NewCarFragment"
+        android:label="New Car"
+        tools:layout="@layout/fragment_new_car">
+
+        <action
+            android:id="@+id/action_select_category"
+            app:destination="@id/category_destination"
+            app:enterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/category_destination"
+        android:name="com.jimenard.scrummerstest.ui.fragment.CategoryListFragment"
+        android:label="Category"
+        tools:layout="@layout/fragment_car_detail" />
+
+</navigation>

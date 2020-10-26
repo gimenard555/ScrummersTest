@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">ScrummersTest</string>
+    <string name="category_car">Category Car</string>
+    <string name="seats_up">Seats up</string>
+    <string name="date_released">Date released</string>
+    <string name="model">Model</string>
+    <string name="price">Price</string>
+    <string name="is_new">Is New?</string>
+    <string name="add_new_car">ADD NEW CAR</string>
+</resources>
